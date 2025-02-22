@@ -22,7 +22,7 @@ export const Cover = ({
   useEffect(() => {
     if (ref.current) {
       setContainerWidth(ref.current?.clientWidth ?? 0);
-
+  
       const height = ref.current?.clientHeight ?? 0;
       const numberOfBeams = Math.floor(height / 10); // Adjust the divisor to control the spacing
       const positions = Array.from(
@@ -31,7 +31,7 @@ export const Cover = ({
       );
       setBeamPositions(positions);
     }
-  }, [ref.current]);
+  }, []); 
 
   return (
     <div
@@ -221,8 +221,10 @@ export const CircleIcon = ({
     <div
       className={cn(
         `pointer-events-none animate-pulse group-hover/cover:hidden group-hover/cover:opacity-100 group h-2 w-2 rounded-full bg-neutral-600 opacity-20 group-hover/cover:bg-white`,
+        delay && `delay-[${delay}s]`, // Use delay if provided
         className
       )}
     ></div>
   );
 };
+
