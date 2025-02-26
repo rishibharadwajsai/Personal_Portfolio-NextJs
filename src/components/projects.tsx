@@ -42,7 +42,7 @@ export function Projects() {
           href="https://github.com/rishibharadwajsai/MediPredict"
           heading="MediPredict"
           body="This project explores the prediction of cardiac disease probability using a dataset of health metrics."
-          imageUrl="/rishi_github.png"
+          imageUrl="/Health-care-image.png"
         />
         <AnimatedPinDemo
           title="/reactsocialmediaapp.vercel.app"
@@ -56,7 +56,7 @@ export function Projects() {
           href="https://github.com/rishibharadwajsai/OCR-Handwritten-text-recognition"
           heading="OCR - Handwritten text Recognition"
           body="This repository features a ReactJS-based whiteboard for handwritten text input, integrated with a TensorFlow 2.x HTR system trained on multiple datasets."
-          imageUrl="/rishi_github.png"
+          imageUrl="/ocr.png"
         />
       </div>
     </div>
