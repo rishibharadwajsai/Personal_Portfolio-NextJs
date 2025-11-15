@@ -10,6 +10,7 @@ import { WhatIDo } from "@/components/whatido";
 // import { WorldMapDemo } from "@/components/worldglobe";
 // import { motion } from "motion/react";
 import dynamic from "next/dynamic";
+import { MediumEmbed } from "@/components/mediumEmbed";
 
 const World = dynamic(
   () => import("../components/ui/globe").then((m) => m.World),
@@ -417,6 +418,7 @@ export default function Home() {
       <div id="projects">
         <Projects />
       </div>
+      <MediumEmbed />
       <div id="contact">
         <Contact />
       </div>
