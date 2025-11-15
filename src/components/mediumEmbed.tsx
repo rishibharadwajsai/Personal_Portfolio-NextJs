@@ -3,8 +3,18 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+type MediumPost = {
+  guid: string;
+  title: string;
+  link: string;
+  contentSnippet: string;
+  isoDate: string;
+  thumbnail?: string;
+  categories?: string[];
+};
+
 export function MediumEmbed() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<MediumPost[]>([]);
 
   useEffect(() => {
     async function loadMedium() {
@@ -29,7 +39,6 @@ export function MediumEmbed() {
         A curated list of my recent thoughts, ideas, and learning shared on Medium.
       </p>
 
-      {/* Grid Layout */}
       <div className="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post, index) => (
           <motion.div
@@ -40,18 +49,16 @@ export function MediumEmbed() {
             whileHover={{ scale: 1.03 }}
             className="bg-white border border-gray-200 shadow-md hover:shadow-xl transition-all rounded-2xl p-6 flex flex-col"
           >
-            {/* Title */}
+
             <h3 className="text-xl font-bold text-gray-900 leading-snug">
               {post.title}
             </h3>
 
-            {/* Snippet */}
             <p
               className="text-gray-600 text-sm mt-4 line-clamp-4"
               dangerouslySetInnerHTML={{ __html: post.contentSnippet }}
             />
 
-            {/* Footer */}
             <div className="mt-6 flex justify-between items-center">
               <a
                 href={post.link}
