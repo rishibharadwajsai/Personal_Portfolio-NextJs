@@ -38,7 +38,9 @@ export function FloatingDockDemo() {
     {
       title: "Resume",
       icon: <IconFileText className="h-full w-full text-neutral-500" />,
-      href: "https://drive.google.com/file/d/15W8srNWdPhGiHMYTqP1-BVTD86DGMdIY/view", // Google Drive link
+      // href: "https://drive.google.com/file/d/15W8srNWdPhGiHMYTqP1-BVTD86DGMdIY/view", 
+      // // Google Drive link
+      href: "/"
     },
     {
       title: "LinkedIn",
